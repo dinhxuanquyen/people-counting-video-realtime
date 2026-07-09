@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.venv/
+
+# Environment
+.env
+
+# YOLO Training
+Runs/
+runs/
+
+# Weights
+*.pt
+
+# Videos
+*.mp4
+*.avi
+*.mov
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db

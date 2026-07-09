@@ -1,108 +1,129 @@
-# 👥 People Counting Video and Realtime
+<img width="950" height="494" alt="image" src="https://github.com/user-attachments/assets/6a31d61a-d08b-4a9c-8506-22b35e07f6d2" /># 👥 People Counting Video and Realtime
 
-A Computer Vision project for detecting, tracking, and counting people in videos and realtime camera streams using YOLOv8 and DeepSORT.
+![Project Banner](images/banner.png)
 
 ## 📖 Overview
 
-This project was developed as a Computer Vision course project at Phenikaa University.
+This project was developed for the Computer Vision course at Phenikaa University.
 
-The system is capable of:
+The system uses YOLOv8 and DeepSORT to detect, track, and count people in video streams and realtime camera feeds.
 
-- Detecting people in videos and realtime camera feeds.
-- Tracking individuals using unique IDs.
-- Counting people entering and leaving a specific area.
-- Counting the number of people currently inside a monitored area.
-- Logging counting results for further analysis.
+### Main Features
 
-## 🚀 Features
-
-### 1. People Detection
-
-- Detect people using YOLOv8.
-- Real-time object detection.
-- Bounding box visualization with confidence scores.
-
-### 2. People Tracking
-
-- Multi-object tracking using DeepSORT.
-- Assign unique IDs to each detected person.
-- Maintain tracking consistency across frames.
-
-### 3. Entry / Exit Counting
-
-- Define virtual zones or lines.
-- Count people entering an area.
-- Count people leaving an area.
-- Display current occupancy in real time.
-
-### 4. Realtime Camera Processing
-
-- Webcam support.
-- Live counting and monitoring.
-- Real-time visualization.
-
-### 5. Data Logging
-
-- Save counting statistics to CSV.
-- Track historical entry and exit records.
+- Detect people in videos and realtime cameras
+- Track people using unique IDs
+- Count people entering and leaving an area
+- Count the number of people currently inside a zone
+- Export counting data to CSV
+- Realtime monitoring
 
 ---
 
-## 🛠 Technologies Used
+## 🎯 Project Objectives
 
-### Computer Vision
+This project aims to:
+
+- Automatically detect people
+- Track movement across frames
+- Count entries and exits accurately
+- Monitor occupancy in realtime
+- Support security and business analytics applications
+
+---
+
+# 📸 Demo
+
+## 1️⃣ People Detection
+
+Detect people using YOLOv8.
+<img width="950" height="494" alt="image" src="https://github.com/user-attachments/assets/1fe781fa-f588-4342-86c8-63a72f1a12a8" />
+
+## 2️⃣ Entry Counting
+
+Count people entering a monitored area.
+
+<img width="887" height="396" alt="image" src="https://github.com/user-attachments/assets/929ac4c4-b668-440f-b8e3-3aa1dd46afac" />
+<img width="887" height="396" alt="image" src="https://github.com/user-attachments/assets/a2a8c213-a866-4dfb-b9c8-7b6cff61384c" />
+
+## 3️⃣ Exit Counting
+
+Count people leaving a monitored area.
+<img width="555" height="289" alt="image" src="https://github.com/user-attachments/assets/a4e491f1-18ce-4df2-9259-eaac74b8bf7b" />
+
+
+
+## 4️⃣ Realtime Camera Monitoring
+
+Realtime detection and counting using webcam.
+
+<img width="751" height="572" alt="image" src="https://github.com/user-attachments/assets/fb14bb4e-c665-4cd4-8463-199a26293676" />
+<img width="594" height="450" alt="image" src="https://github.com/user-attachments/assets/a5df705b-2d9c-4059-bbe0-823772a8c170" />
+
+## 5️⃣ Employee & Customer Counting
+
+Classify and count employees and customers separately.
+<img width="768" height="574" alt="image" src="https://github.com/user-attachments/assets/d5c92b50-6f8f-4032-8fda-0ac610b506c8" />
+<img width="762" height="524" alt="image" src="https://github.com/user-attachments/assets/29d906b8-84ba-479b-bb43-60c2c0f34bbd" />
+
+
+---
+
+## 6️⃣ Statistics Dashboard
+
+Counting statistics and logs.
+<img width="889" height="181" alt="image" src="https://github.com/user-attachments/assets/a46224f7-3015-4703-be1f-c959e10e7206" />
+
+<img width="893" height="269" alt="image" src="https://github.com/user-attachments/assets/8717f9ca-32d8-4890-b454-17f8391b7405" />
+
+# 🏗 System Architecture
+
+```text
+Camera / Video
+       │
+       ▼
+   YOLOv8
+(People Detection)
+       │
+       ▼
+   DeepSORT
+(Object Tracking)
+       │
+       ▼
+ Counting Logic
+       │
+       ▼
+ CSV Logging
+       │
+       ▼
+ Realtime Display
+```
+
+# 🛠 Technologies Used
+
+## Programming Language
+
+- Python
+
+## Computer Vision
 
 - YOLOv8
 - DeepSORT
 - OpenCV
 
-### Programming Language
+## Data Processing
 
-- Python
-
-### Training & Dataset
-
-- Roboflow
-- Google Colab
-
-### Libraries
-
-- Ultralytics
 - NumPy
 - Pandas
 - SciPy
 
----
+## Training Platform
 
-## 🧠 Model Information
-
-### Detection Model
-
-YOLOv8 Nano (YOLOv8n)
-
-### Tracking Algorithm
-
-DeepSORT
-
-### Dataset
-
-- 1000+ images for people detection.
-- Images collected under various conditions:
-  - Different viewpoints
-  - Different lighting conditions
-  - Different clothing styles
-
-### Dataset Split
-
-- Training: 70%
-- Validation: 20%
-- Testing: 10%
+- Roboflow
+- Google Colab
 
 ---
 
-## 📊 Performance
-
-Model evaluation results:
+# 📊 Model Performance
 
 | Metric | Value |
 |----------|----------|
@@ -111,7 +132,7 @@ Model evaluation results:
 | mAP50 | 93.1% |
 | mAP50-95 | 70.8% |
 
-Inference speed:
+### Inference Speed
 
 | Stage | Time |
 |---------|---------|
@@ -121,10 +142,19 @@ Inference speed:
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```text
-People_counting_video_and_realtime
+people-counting-video-realtime
+│
+├── images/
+│   ├── banner.png
+│   ├── detection.png
+│   ├── entry-count.png
+│   ├── exit-count.png
+│   ├── realtime.png
+│   ├── employee-customer.png
+│   └── statistics.png
 │
 ├── main.py
 ├── main2.py
@@ -132,32 +162,30 @@ People_counting_video_and_realtime
 ├── tracker.py
 ├── people_log.csv
 │
-├── Runs/
-├── weights/
-│
 └── README.md
 ```
 
 ---
 
-## ▶️ How To Run
+# 🚀 Installation
 
-### 1. Clone repository
+Clone repository:
 
 ```bash
 git clone https://github.com/dinhxuanquyen/people-counting-video-realtime.git
 ```
 
-### 2. Install dependencies
+Install dependencies:
 
 ```bash
 pip install ultralytics
 pip install opencv-python
 pip install numpy
 pip install pandas
+pip install scipy
 ```
 
-### 3. Run project
+Run project:
 
 ```bash
 python main.py
@@ -169,44 +197,47 @@ or
 python main2.py
 ```
 
-depending on the desired functionality.
-
 ---
 
-## 📈 Applications
+# 💡 Applications
 
+- Smart retail stores
 - Security monitoring
-- Retail customer counting
-- Employee management
-- Warehouse monitoring
-- Smart building analytics
+- Building occupancy analysis
+- Employee attendance monitoring
+- Warehouse management
+- Customer flow analysis
 
 ---
 
-## 👨‍💻 Team Members
+# 👨‍💻 Team Members
 
-- Cao Mậu Thành Đạt
-- Nguyễn Trần Việt Anh
-- Đinh Xuân Quyền
-- Võ Quang Giáp
-- Trần Đình Đàn
+| Student | ID |
+|----------|----------|
+| Cao Mậu Thành Đạt | 22010338 |
+| Nguyễn Trần Việt Anh | 22010341 |
+| Đinh Xuân Quyền | 22010342 |
+| Võ Quang Giáp | 22010343 |
+| Trần Đình Đàn | 22010053 |
 
 ### Instructor
 
-ThS. Nguyễn Thị Khánh Trâm
+**ThS. Nguyễn Thị Khánh Trâm**
 
-Phenikaa University – Faculty of Information Technology
-
----
-
-## 🔮 Future Improvements
-
-- Improve detection accuracy in low-light conditions.
-- Handle heavy occlusion more effectively.
-- Integrate ByteTrack or FairMOT.
-- Deploy on edge devices and surveillance systems.
-- Build a complete smart monitoring platform.
+Faculty of Information Technology  
+Phenikaa University
 
 ---
 
-⭐ If you find this project useful, please give it a star!
+# 🔮 Future Improvements
+
+- Improve low-light performance
+- Handle heavy occlusion
+- Integrate ByteTrack
+- Integrate FairMOT
+- Deploy on edge devices
+- Build a complete smart monitoring platform
+
+---
+
+⭐ If you like this project, please give it a star!
